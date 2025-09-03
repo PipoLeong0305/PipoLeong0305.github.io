@@ -7,4 +7,5 @@ export default defineConfig({
     applyBaseStyles: true,
   })],
   output: 'static',
+  site: 'https://pipoleong0305.github.io',
 });

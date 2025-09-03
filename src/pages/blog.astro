@@ -1,0 +1,39 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { MarkdownInstance } from 'astro';
+
+interface Frontmatter {
+  title: string;
+  description?: string;
+  pubDate?: string | Date;
+}
+
+const posts = (await Astro.glob('./blog/*.md')) as MarkdownInstance<Frontmatter>[];
+const sortedPosts: MarkdownInstance<Frontmatter>[] = [...posts].sort((a, b) => {
+  const aDate = a.frontmatter.pubDate ? new Date(a.frontmatter.pubDate).getTime() : 0;
+  const bDate = b.frontmatter.pubDate ? new Date(b.frontmatter.pubDate).getTime() : 0;
+  return bDate - aDate;
+});
+---
+<BaseLayout title="Blog — Pipo Leong">
+  <h1 class="text-2xl sm:text-3xl font-bold">Blog</h1>
+  {sortedPosts.length === 0 ? (
+    <p class="mt-4 text-gray-600 dark:text-gray-300">Posts coming soon.</p>
+  ) : (
+  <ul class="mt-4 space-y-4 sm:mt-6 sm:space-y-6">
+      {sortedPosts.map((post) => (
+          <li class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition">
+            <a href={post.url} class="block">
+              <h2 class="text-xl font-semibold">{post.frontmatter.title}</h2>
+              {post.frontmatter.description && (
+                <p class="mt-2 text-gray-600 dark:text-gray-300">{post.frontmatter.description}</p>
+              )}
+              {post.frontmatter.pubDate && (
+                <p class="mt-2 text-sm text-gray-500">{new Date(post.frontmatter.pubDate).toLocaleDateString()}</p>
+              )}
+            </a>
+          </li>
+        ))}
+    </ul>
+  )}
+</BaseLayout>

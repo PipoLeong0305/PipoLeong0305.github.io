@@ -1,0 +1,57 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Education — Pipo Leong" description="Academic background of Pipo Leong">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">My Education</h1>
+  <p class="mt-3 text-gray-600 dark:text-gray-300">Here’s a concise look at my studies and co‑curricular achievements.</p>
+
+  <nav class="mt-4 text-sm">
+    <ul class="flex flex-col sm:flex-row flex-wrap gap-2 text-gray-600 dark:text-gray-300">
+      <li><a href="#diploma" class="badge">Diploma (TAR UMT)</a></li>
+      <li><a href="#spm" class="badge">SPM</a></li>
+    </ul>
+  </nav>
+
+  <ol class="relative mt-6 border-s border-black/10 dark:border-white/10">
+    <li id="diploma" class="ms-6 pb-10 last:pb-0 scroll-mt-20">
+      <span
+        class="absolute -start-2.5 mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white ring-8 ring-white/70 dark:ring-gray-950"
+      >
+        <span class="h-2 w-2 rounded-full bg-white/90"></span>
+      </span>
+  <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+        <h3 class="font-semibold">Diploma in Information Technology</h3>
+        <span class="text-sm text-gray-500">2018 — 2020</span>
+      </div>
+      <p class="italic text-sm text-gray-600 dark:text-gray-400">
+        Tunku Abdul Rahman University of Management and Technology (TAR UMT)
+      </p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="badge">Information Technology</span>
+        <span class="badge">Faculty Volleyball — Champions</span>
+        <span class="badge">Co-curricular Volleyball — 2nd Place</span>
+      </div>
+    </li>
+
+    <li id="spm" class="ms-6 pb-10 last:pb-0 scroll-mt-20">
+      <span
+        class="absolute -start-2.5 mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-brand text-white ring-8 ring-white/70 dark:ring-gray-950"
+      >
+        <span class="h-2 w-2 rounded-full bg-white/90"></span>
+      </span>
+      <div class="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
+        <h3 class="font-semibold">SPM</h3>
+        <span class="text-sm text-gray-500">2013 — 2017</span>
+      </div>
+      <p class="italic text-sm text-gray-600 dark:text-gray-400">
+        Sekolah Menengah Kebangsaan Dato' Abdul Rahman Ya'kub
+      </p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="badge">Head Librarian</span>
+        <span class="badge">Head, Volleyball School Team</span>
+        <span class="badge">MSSM 2017 — State Player</span>
+      </div>
+    </li>
+  </ol>
+</BaseLayout>

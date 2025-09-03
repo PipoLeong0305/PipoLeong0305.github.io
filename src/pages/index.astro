@@ -1,0 +1,97 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+<BaseLayout title="Pipo Leong — Developer" description="Portfolio, projects, and writing.">
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden rounded-2xl border border-black/10 dark:border-white/10 bg-gradient-to-b from-brand/5 to-transparent p-8 md:p-12">
+      <div class="flex flex-col-reverse items-start gap-6 sm:gap-8 md:flex-row md:items-center md:justify-between">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-brand">
+          <span class="inline-flex h-2 w-2 rounded-full bg-brand"></span>
+          Available for opportunities
+        </div>
+          <h1 class="mt-3 text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">Hi, I’m Pipo 👋</h1>
+        <p class="mt-3 text-lg text-gray-600 dark:text-gray-300">
+          I craft fast, accessible web apps with Astro, TypeScript, and modern UI patterns.
+          I love clean design, delightful micro-interactions, and measurable impact.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/projects" class="inline-flex items-center gap-2 rounded-md bg-brand px-4 py-2 text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-brand-dark w-full sm:w-auto text-center">
+            <span>View Projects</span>
+          </a>
+            <a href="/about" class="inline-flex items-center gap-2 rounded-md border px-4 py-2 border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 w-full sm:w-auto text-center">
+            <span>About Me</span>
+          </a>
+            <a href="/experience" class="inline-flex items-center gap-2 rounded-md border px-4 py-2 border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 w-full sm:w-auto text-center">
+            <span>Experience</span>
+          </a>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-500">
+          <a class="hover:text-brand" href="mailto:Leongpipo2000@gmail.com">Email</a>
+          <span class="opacity-40">•</span>
+          <a class="hover:text-brand" href="https://github.com/PipoLeong0305" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="relative ml-auto grid place-items-center">
+          <div class="h-20 w-20 sm:h-28 sm:w-28 md:h-32 md:w-32 overflow-hidden rounded-2xl ring-1 ring-black/10 dark:ring-white/10">
+          <img
+            src="https://github.com/PipoLeong0305.png?size=400"
+            alt="Pipo Leong"
+              class="h-full w-full object-cover"
+            width="128"
+            height="128"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+      <div class="pointer-events-none absolute inset-x-0 -bottom-24 h-24 sm:h-32 md:h-48 bg-gradient-to-t from-white dark:from-gray-950"></div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <a href="/projects" class="group rounded-xl border border-black/10 p-5 transition hover:-translate-y-1 hover:shadow-sm dark:border-white/10">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold">Projects</h2>
+        <span class="text-xl transition group-hover:translate-x-1">→</span>
+      </div>
+      <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Real-world builds with modern stacks and strong UX.</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="badge">Astro</span>
+        <span class="badge">TypeScript</span>
+        <span class="badge">Tailwind</span>
+      </div>
+    </a>
+    <a href="/experience" class="group rounded-xl border border-black/10 p-5 transition hover:-translate-y-1 hover:shadow-sm dark:border-white/10">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold">Experience</h2>
+        <span class="text-xl transition group-hover:translate-x-1">→</span>
+      </div>
+      <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Hands-on roles delivering features end-to-end.</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="badge">Frontend</span>
+        <span class="badge">Full‑stack</span>
+        <span class="badge">UI/UX</span>
+      </div>
+    </a>
+    <a href="/blog" class="group rounded-xl border border-black/10 p-5 transition hover:-translate-y-1 hover:shadow-sm dark:border-white/10">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold">Blog</h2>
+        <span class="text-xl transition group-hover:translate-x-1">→</span>
+      </div>
+      <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Notes on building, learning, and shipping faster.</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <span class="badge">Guides</span>
+        <span class="badge">Snippets</span>
+        <span class="badge">Case studies</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- Callout -->
+  <section class="mt-10 rounded-xl border border-dashed border-black/10 p-6 text-sm text-gray-600 dark:border-white/10 dark:text-gray-300">
+    Open to collaborating on interesting problems. If you’re building something user‑centric, let’s talk.
+  </section>
+</BaseLayout>
